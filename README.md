@@ -1,2 +1,3 @@
-Quase uma calculadora
-https://gabrielgoncalvesbr.github.io/Calculadora/
+# Calculadora
+[Clique aqui!](https://gabrielgoncalvesbr.github.io/Calculadora/)
+
