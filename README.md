@@ -1,1 +1,82 @@
-# Calculadora
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quase uma calculadora</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+    
+        div {
+            background: white;
+            padding: 30px;  /* Aumenta o espaço dentro da calculadora */
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+    
+        input {
+            width: 100%;
+            font-size: 2em;  /* Aumenta o visor */
+            margin-bottom: 15px;
+            text-align: right;
+            padding: 10px;
+        }
+    
+        button {
+            width: 80px;  /* Largura dos botões */
+            height: 80px; /* Altura dos botões */
+            font-size: 1.5em;  /* Tamanho do texto dos botões */
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Visor  -->
+    <input type="text" id="display" disabled>
+
+    <!-- Botões -->
+   
+    <button onclick="adicionarNumero('7')">7</button>
+    <button onclick="adicionarNumero('8')">8</button>
+    <button onclick="adicionarNumero('9')">9</button>
+    <button onclick="adicionarNumero('+')">+</button>
+    <button onclick="adicionarNumero('4')">4</button>
+    <button onclick="adicionarNumero('5')">5</button>
+    <button onclick="adicionarNumero('6')">6</button>
+    <button onclick="adicionarNumero('-')">-</button>
+    <button onclick="adicionarNumero('1')">1</button>
+    <button onclick="adicionarNumero('2')">2</button>
+    <button onclick="adicionarNumero('3')">3</button>
+    <button onclick="adicionarNumero('*')">*</button>
+    <button onclick="adicionarNumero('0')">0</button>
+    <button onclick="adicionarNumero('.')">.</button>
+    <button onclick="calcularResultado()">=</button>
+    <button onclick="adicionarNumero('/')">/</button>
+    <button onclick="limparDisplay()">C</button>
+
+    <script>
+        function adicionarNumero(valor) {
+            document.getElementById("display").value += valor;
+        }
+
+        function limparDisplay() {
+            document.getElementById("display").value = "";
+        }
+
+        function calcularResultado() {
+            let display = document.getElementById("display");
+            display.value = eval(display.value);
+        }
+    </script>
+
+</body>
+</html>
